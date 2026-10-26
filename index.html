@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habitly - Small Steps Today, A Better You Tomorrow</title>
+  <meta name="description" content="Habitly helps you track daily habits, stay focused with an integrated Pomodoro timer, and build a healthier, happier, and more productive life.">
+  <meta name="keywords" content="habit tracker, focus timer, pomodoro, productivity app, daily habits, habitly">
+  <meta name="author" content="Habitly Team">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Habitly - Small Steps Today, A Better You Tomorrow">
+  <meta property="og:description" content="Track daily habits, stay focused, and visualize your progress with Habitly.">
+  <meta property="og:image" content="assets/images/app_icon.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a href="#home" class="brand-logo" aria-label="Habitly Home">
+          <img src="assets/images/app_icon.png" alt="Habitly Logo Icon" class="brand-icon">
+          <span class="brand-name">Habitly</span>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Theme Toggle -->
+          <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle dark/light mode">
+            <!-- Moon icon (for light mode) -->
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <!-- Sun icon (for dark mode) -->
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+
+          <!-- Download App CTA -->
+          <a href="#download" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download App</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-nav-toggle" aria-label="Open mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Hero Section
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Left Column: Copy & CTAs -->
+        <div class="hero-content">
+          <!-- Badge -->
+          <div class="hero-badge">
+            <span>☀️</span>
+            <span>Build Better Habits</span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="hero-title">
+            Small Steps Today, <br>
+            A Better You <br>
+            <span class="hero-title-highlight">
+              Tomorrow
+              <!-- Hand-drawn SVG Underline Effect -->
+              <svg class="hero-title-brush" viewBox="0 0 190 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 11C40 4 120 4 187 8" stroke="#FF6A00" stroke-width="4.5" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="hero-subtitle">
+            Habitly helps you track your daily habits, stay focused, and build a healthier, happier, and more productive life — one small step at a time.
+          </p>
+
+          <!-- Store Badges -->
+          <div class="store-buttons">
+            <!-- Google Play Button -->
+            <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="store-btn">
+              <span class="store-btn-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3.609 1.814L13.793 12 3.61 22.186a1.996 1.996 0 0 1-.61-.954V2.768c.08-.363.292-.699.609-.954zm11.238 11.24l2.25 2.25-11.458 6.445 9.208-8.695zm0-2.108L5.639 2.25l11.457 6.446-2.249 2.25zm1.536 1.054l4.225 2.376c.799.45.799 1.187 0 1.636l-4.225 2.377-2.09-2.09 2.09-2.299z"/>
+                </svg>
+              </span>
+              <div class="store-btn-text">
+                <span class="store-btn-sub">GET IT ON</span>
+                <span class="store-btn-main">Google Play</span>
+              </div>
+            </a>
+
+            <!-- App Store Button -->
+            <a href="https://apple.com/app-store" target="_blank" rel="noopener noreferrer" class="store-btn">
+              <span class="store-btn-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.63-.76 1.05-1.81.93-2.87-1 .04-2.18.66-2.83 1.42-.58.67-.99 1.74-.88 2.78 1.12.09 2.15-.57 2.78-1.33z"/>
+                </svg>
+              </span>
+              <div class="store-btn-text">
+                <span class="store-btn-sub">Download on the</span>
+                <span class="store-btn-main">App Store</span>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Habitly App Showcase (Pixel-Perfect Coded Dual iPhone 15 Pro Showcase) -->
+        <div class="hero-showcase" aria-label="Habitly App Showcase">
+          <div class="showcase-stage">
+
+            <!-- 1. Ambient Warm Glow & Concentric Waves -->
+            <div class="stage-backdrop-glow" aria-hidden="true"></div>
+            <div class="stage-backdrop-ring ring-1" aria-hidden="true"></div>
+            <div class="stage-backdrop-ring ring-2" aria-hidden="true"></div>
+
+            <!-- 2. Floating Orange Bokeh Dots -->
+            <span class="stage-dot dot-1" aria-hidden="true"></span>
+            <span class="stage-dot dot-2" aria-hidden="true"></span>
+            <span class="stage-dot dot-3" aria-hidden="true"></span>
+            <span class="stage-dot dot-4" aria-hidden="true"></span>
+            <span class="stage-dot dot-5" aria-hidden="true"></span>
+
+            <!-- 3. Top-Left Annotation: Track your Habits + Curved Doodle Arrow -->
+            <div class="doodle-annotation doodle-track">
+              <span class="doodle-text">Track<br>your Habits</span>
+              <svg class="doodle-arrow arrow-track" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 6 C 14 30, 32 48, 54 50" stroke="#FF6A00" stroke-width="4.5" stroke-linecap="round"/>
+                <path d="M40 40 L 55 50 L 42 60" stroke="#FF6A00" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- 4. Left Phone Mockup: Home Dashboard (Tilted -6.5deg) -->
+            <div class="phone-mockup phone-primary">
+              <div class="phone-outer-frame">
+                <!-- Dynamic Island -->
+                <div class="phone-dynamic-island">
+                  <span class="camera-lens"></span>
+                </div>
+                <!-- Glass Glare Reflection -->
+                <div class="phone-glass-glare" aria-hidden="true"></div>
+                <!-- App Screen Image -->
+                <img
+                  src="assets/images/screen_home.png"
+                  alt="Habitly Daily Habits Dashboard"
+                  class="phone-screen-img"
+                  loading="eager"
+                  draggable="false"
+                >
+              </div>
+            </div>
+
+            <!-- 5. Floating Badge 1: 4 Total Habits (Tilted -6.5deg, Left of Phone) -->
+            <div class="floating-badge badge-habits">
+              <!-- Radiant Sparkles Above -->
+              <svg class="badge-sparkles sparkles-card1" width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="5" y1="14" x2="2" y2="4" stroke="#FF8A00" stroke-width="2.8" stroke-linecap="round"/>
+                <line x1="15" y1="16" x2="15" y2="2" stroke="#FF8A00" stroke-width="2.8" stroke-linecap="round"/>
+                <line x1="25" y1="14" x2="28" y2="4" stroke="#FF8A00" stroke-width="2.8" stroke-linecap="round"/>
+              </svg>
+              <div class="badge-card">
+                <!-- Concentric Target Icon -->
+                <div class="badge-icon-wrap target-icon">
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="17" cy="17" r="16" fill="#FFF1EE"/>
+                    <circle cx="17" cy="17" r="12" stroke="#FF4757" stroke-width="2.6" fill="none"/>
+                    <circle cx="17" cy="17" r="7.2" stroke="#FF4757" stroke-width="2.6" fill="none"/>
+                    <circle cx="17" cy="17" r="3.2" fill="#FF4757"/>
+                  </svg>
+                </div>
+                <!-- Numbers and Label -->
+                <div class="badge-content">
+                  <span class="badge-num">4</span>
+                  <span class="badge-label">Total Habits</span>
+                </div>
+                <!-- 3D Trend Arrow -->
+                <div class="badge-trend">
+                  <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="14" width="24" height="6" rx="3" fill="#FFEFE6"/>
+                    <path d="M4 14L10 8L15 11L22 3" stroke="#FF6A00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 3H22V9" stroke="#FF6A00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Right Phone Mockup: Focus Timer (Tilted +9.5deg, Behind Left Phone) -->
+            <div class="phone-mockup phone-secondary">
+              <div class="phone-outer-frame">
+                <!-- Dynamic Island -->
+                <div class="phone-dynamic-island">
+                  <span class="camera-lens"></span>
+                </div>
+                <!-- Glass Glare Reflection -->
+                <div class="phone-glass-glare" aria-hidden="true"></div>
+                <!-- App Screen Image -->
+                <img
+                  src="assets/images/screen_timer.png"
+                  alt="Habitly Focus Timer Screen"
+                  class="phone-screen-img"
+                  loading="eager"
+                  draggable="false"
+                >
+              </div>
+            </div>
+
+            <!-- 7. Floating Badge 2: Stay Focused (Tilted +9.5deg, Top-Right) -->
+            <div class="floating-badge badge-focus">
+              <div class="badge-card">
+                <!-- Target with Cyan Dart Pin -->
+                <div class="badge-icon-wrap target-dart-icon">
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="19" r="16" fill="#FFF1EE"/>
+                    <circle cx="18" cy="19" r="11.5" stroke="#FF4757" stroke-width="2.5" fill="none"/>
+                    <circle cx="18" cy="19" r="7" stroke="#FF4757" stroke-width="2.5" fill="none"/>
+                    <circle cx="18" cy="19" r="3" fill="#FF4757"/>
+                    <!-- Sky Blue Dart pinned in center (18, 19) -->
+                    <path d="M18 19L27 10" stroke="#0072CE" stroke-width="2.8" stroke-linecap="round"/>
+                    <path d="M22 9L29 10L28 17L24 13Z" fill="#00B2FF"/>
+                    <path d="M25 7L31 9L29 13Z" fill="#38BDF8"/>
+                  </svg>
+                </div>
+                <!-- Text -->
+                <div class="badge-content">
+                  <span class="badge-title">Stay<br>Focused</span>
+                </div>
+                <!-- 3D Trend Arrow -->
+                <div class="badge-trend">
+                  <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="14" width="24" height="6" rx="3" fill="#FFEFE6"/>
+                    <path d="M4 14L10 8L15 11L22 3" stroke="#FF6A00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 3H22V9" stroke="#FF6A00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- 8. Right Doodle Arrow: Curves down-left pointing to 25:00 Focus Timer -->
+            <div class="doodle-annotation doodle-focus">
+              <svg class="doodle-arrow arrow-focus" viewBox="0 0 70 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M64 6 C 62 42, 45 74, 15 80" stroke="#FF6A00" stroke-width="4.5" stroke-linecap="round"/>
+                <path d="M28 68 L 14 80 L 30 90" stroke="#FF6A00" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+
+            <!-- 9. Floating Badge 3: 0% Consistency (Tilted +9.5deg, Bottom-Right) -->
+            <div class="floating-badge badge-consistency">
+              <!-- Radiant Sparkles Above -->
+              <svg class="badge-sparkles sparkles-right" width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="5" y1="14" x2="2" y2="4" stroke="#FF8A00" stroke-width="2.8" stroke-linecap="round"/>
+                <line x1="15" y1="16" x2="15" y2="2" stroke="#FF8A00" stroke-width="2.8" stroke-linecap="round"/>
+                <line x1="25" y1="14" x2="28" y2="4" stroke="#FF8A00" stroke-width="2.8" stroke-linecap="round"/>
+              </svg>
+              <div class="badge-card">
+                <!-- 4 Orange Gradient Bars -->
+                <div class="badge-icon-wrap bars-icon">
+                  <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="16" fill="#FFF1EE"/>
+                    <rect x="8.5" y="17" width="3.6" height="10" rx="1.8" fill="url(#orangeBarGrad)"/>
+                    <rect x="14" y="13" width="3.6" height="14" rx="1.8" fill="url(#orangeBarGrad)"/>
+                    <rect x="19.5" y="8" width="3.6" height="19" rx="1.8" fill="url(#orangeBarGrad)"/>
+                    <rect x="25" y="15" width="3.6" height="12" rx="1.8" fill="url(#orangeBarGrad)"/>
+                    <defs>
+                      <linearGradient id="orangeBarGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#FF5500"/>
+                        <stop offset="100%" stop-color="#FF8A00"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <!-- Number and Label -->
+                <div class="badge-content">
+                  <span class="badge-num">0%</span>
+                  <span class="badge-label">Consistency</span>
+                </div>
+                <!-- 3D Trend Arrow -->
+                <div class="badge-trend">
+                  <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="14" width="24" height="6" rx="3" fill="#FFEFE6"/>
+                    <path d="M4 14L10 8L15 11L22 3" stroke="#FF6A00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 3H22V9" stroke="#FF6A00" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Highlights Ribbon (4 Feature Badges from Mockup)
+       ========================================================================== -->
+  <section class="highlights-ribbon">
+    <div class="container">
+      <div class="highlights-grid">
+
+        <!-- Card 1: Track Habits -->
+        <div class="highlight-card">
+          <div class="highlight-icon-box orange">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <div class="highlight-info">
+            <h3>Track Habits</h3>
+            <p>Easily track your daily habits and stay consistent.</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Focus & Be Productive -->
+        <div class="highlight-card">
+          <div class="highlight-icon-box blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="highlight-info">
+            <h3>Focus & Be Productive</h3>
+            <p>Use the focus timer to get more done, distraction free.</p>
+          </div>
+        </div>
+
+        <!-- Card 3: See Your Progress -->
+        <div class="highlight-card">
+          <div class="highlight-icon-box green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+          </div>
+          <div class="highlight-info">
+            <h3>See Your Progress</h3>
+            <p>Visualize your growth with beautiful insights.</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Build a Better You -->
+        <div class="highlight-card">
+          <div class="highlight-icon-box yellow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+              <path d="M4 22h16"></path>
+              <path d="M10 14.66V17c0 .55-.45 1-1 1H7.5"></path>
+              <path d="M14 14.66V17c0 .55.45 1 1 1h1.5"></path>
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+            </svg>
+          </div>
+          <div class="highlight-info">
+            <h3>Build a Better You</h3>
+            <p>Small habits lead to big changes over time.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Features Section
+       ========================================================================== -->
+  <section class="section-padding section-alt" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Features</span>
+        <h2 class="section-title">Everything You Need to Build Lasting Habits</h2>
+        <p class="section-subtitle">
+          Designed with intention to help you overcome friction, organize daily routines, and stay consistent effortlessly.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20h9"></path>
+              <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+            </svg>
+          </div>
+          <h3>Custom Habit Routines</h3>
+          <p>Create habits with customized durations, target pages, daily frequencies, and flexible schedules tailored to your lifestyle.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>Integrated Pomodoro Timer</h3>
+          <p>Boost your productivity with custom focus sessions, quick intervals (5m, 25m, 30m, 45m), and structured short breaks.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 20V10"></path>
+              <path d="M12 20V4"></path>
+              <path d="M6 20v-6"></path>
+            </svg>
+          </div>
+          <h3>Streak & Growth Analytics</h3>
+          <p>Stay motivated with streak counters, completion percentages, weekly growth graphs, and monthly consistency heatmaps.</p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+          </div>
+          <h3>Gentle Smart Reminders</h3>
+          <p>Get timely nudges at your preferred hours so you never miss a morning workout, afternoon reading, or evening reflection.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            </svg>
+          </div>
+          <h3>Dark & Light Aesthetics</h3>
+          <p>Switch seamlessly between an energizing warm light theme and a soothing dark theme designed to reduce eye strain.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
+          <h3>100% Privacy & Offline Ready</h3>
+          <p>Your habits belong to you. Habitly works completely offline with zero intrusive tracking or unwanted data collection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Interactive Focus Timer Live Widget
+       ========================================================================== -->
+  <section class="section-padding timer-demo-section">
+    <div class="container">
+      <div class="timer-demo-card">
+        <!-- Info Column -->
+        <div class="timer-demo-info">
+          <span class="section-tag">Interactive Preview</span>
+          <h3>Try The Focus Timer Right Now</h3>
+          <p>
+            Experience how Habitly’s focus mode keeps your mind centered. Pick a duration, hit start, and build the habit of undivided attention.
+          </p>
+          <ul class="timer-demo-features">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Distraction-free countdown</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Quick session presets (5m, 25m, 30m, 45m)</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Automatic streak logging on completion</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Interactive Widget Column -->
+        <div class="interactive-timer">
+          <!-- Preset Chips -->
+          <div class="timer-preset-chips">
+            <button class="preset-chip" data-minutes="5">5 min</button>
+            <button class="preset-chip active" data-minutes="25">25 min</button>
+            <button class="preset-chip" data-minutes="30">30 min</button>
+            <button class="preset-chip" data-minutes="45">45 min</button>
+          </div>
+
+          <!-- Circular SVG Progress Ring -->
+          <div class="timer-circle-wrapper">
+            <svg class="timer-svg" viewBox="0 0 200 200">
+              <circle class="timer-bg-circle" cx="100" cy="100" r="90"></circle>
+              <circle class="timer-progress-circle" cx="100" cy="100" r="90"></circle>
+            </svg>
+            <div class="timer-time-display">
+              <span id="timer-digits" class="timer-digits">25:00</span>
+              <span id="timer-status" class="timer-status-text">Ready to start</span>
+            </div>
+          </div>
+
+          <!-- Timer Actions -->
+          <div class="timer-actions">
+            <button id="timer-toggle-btn" class="timer-btn-toggle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              <span>Start Focus</span>
+            </button>
+            <button id="timer-reset-btn" class="timer-btn-reset" aria-label="Reset Timer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 2v6h6"></path>
+                <path d="M21 12A9 9 0 0 0 6 5.3L3 8"></path>
+                <path d="M21 22v-6h-6"></path>
+                <path d="M3 12a9 9 0 0 0 15 6.7l3-2.7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       How It Works Section
+       ========================================================================== -->
+  <section class="section-padding section-alt" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">How It Works</span>
+        <h2 class="section-title">Start Building Habits in 3 Simple Steps</h2>
+        <p class="section-subtitle">
+          No complicated setup or overwhelm. Habitly makes starting and sticking to routines effortless.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <span class="step-number">01</span>
+          <div class="step-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="16"></line>
+              <line x1="8" y1="12" x2="16" y2="12"></line>
+            </svg>
+          </div>
+          <h3>Define Your Daily Habits</h3>
+          <p>Choose from curated categories like fitness, reading, and mindfulness, or create custom habits with personalized goals.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <span class="step-number">02</span>
+          <div class="step-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+          </div>
+          <h3>Focus & Complete Sessions</h3>
+          <p>Use the built-in focus timer for focused work or track activities directly. Check off habits as you finish them.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <span class="step-number">03</span>
+          <div class="step-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+          </div>
+          <h3>Watch Your Streak Grow</h3>
+          <p>Celebrate milestone streaks and analyze your weekly consistency. Small steps every day lead to big, lasting changes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Frequently Asked Questions (FAQ)
+       ========================================================================== -->
+  <section class="section-padding" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Got Questions?</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Everything you need to know about getting started with Habitly.
+        </p>
+      </div>
+
+      <div class="faq-wrapper">
+        <!-- Question 1 -->
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Is Habitly free to use?</span>
+            <div class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Habitly provides habit tracking, reminders, focus timer sessions, and progress insights. Availability and pricing may vary by platform and release.</p>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Does Habitly work offline?</span>
+            <div class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Some features can work without a network connection, while sign-in, cloud synchronization, and other connected features require internet access.</p>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does the Pomodoro Focus Timer work?</span>
+            <div class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>The timer allows you to start focused sessions (default 25 minutes) with structured breaks. When you finish a session attached to a habit (like reading or meditation), it automatically counts towards your daily progress.</p>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>How does Habitly protect my personal data?</span>
+            <div class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Habitly uses account and app data to provide its features. We do not sell personal data, and limited information may be processed by trusted infrastructure providers to operate and secure the service.</p>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can I customize reminders and notifications?</span>
+            <div class="faq-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. You can configure individual notification schedules for each habit, choosing exact times of day and repeat days so you stay consistent on your own terms.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Privacy Policy & Terms
+       ========================================================================== -->
+  <section class="section-padding section-alt legal-section" id="privacy">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Your Privacy</span>
+        <h2 class="section-title">Privacy Policy</h2>
+        <p class="section-subtitle">
+          Habitly collects only the information needed to provide and improve the app.
+        </p>
+      </div>
+      <div class="legal-content">
+        <h3>Information We Collect</h3>
+        <p>When you create an account, we may collect your name, email address, and profile details. We also process habit names, goals, schedules, reminders, focus sessions, progress, favorites, and notification status that you choose to save in the app.</p>
+        <h3>How We Use Information</h3>
+        <p>We use this information to authenticate your account, save and synchronize your habits, send requested reminders, show progress insights, provide support, maintain security, and improve Habitly.</p>
+        <h3>Sharing and Security</h3>
+        <p>We do not sell your personal information. Limited information may be processed by trusted authentication, database, storage, notification, or analytics providers that help us operate the service. We use reasonable safeguards, but no online service can guarantee absolute security.</p>
+        <h3>Your Choices</h3>
+        <p>You can manage your profile, habits, reminders, and notification permissions from the app. For privacy questions or account support, contact <a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding legal-section" id="terms">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Using Habitly</span>
+        <h2 class="section-title">Terms &amp; Conditions</h2>
+        <p class="section-subtitle">
+          By using Habitly, you agree to use the app responsibly and in accordance with these terms.
+        </p>
+      </div>
+      <div class="legal-content">
+        <h3>Acceptable Use</h3>
+        <p>Habitly is intended for personal habit tracking and general wellness and productivity support. Do not misuse the service, interfere with its operation, attempt unauthorized access, or use it for unlawful purposes.</p>
+        <h3>Your Account and Content</h3>
+        <p>You are responsible for keeping your account information secure and for the habit data and other content you add. You retain responsibility for maintaining any information you want to keep.</p>
+        <h3>Wellness Disclaimer</h3>
+        <p>Habitly does not provide medical, mental-health, fitness, financial, or other professional advice. Do not rely on the app as a substitute for advice from a qualified professional.</p>
+        <h3>Changes and Termination</h3>
+        <p>We may update features or these terms from time to time. Continued use after an update means you accept the revised terms. Access may be suspended or terminated when these terms are violated.</p>
+        <h3>Support</h3>
+        <p>Habitly is developed by <a href="https://appstick.com.bd/" target="_blank" rel="noopener noreferrer">Appstick</a>. For help, contact <a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Download CTA Banner Section
+       ========================================================================== -->
+  <section class="cta-section" id="download">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-bg-glow"></div>
+        <div class="cta-content">
+          <span class="section-tag">Start Today</span>
+          <h2 class="cta-title">Ready to Build Habits That Actually Stick?</h2>
+          <p class="cta-subtitle">
+            Start building consistent, life-changing habits with Habitly today.
+          </p>
+
+          <!-- Store Badges -->
+          <div class="store-buttons">
+            <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="store-btn">
+              <span class="store-btn-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3.609 1.814L13.793 12 3.61 22.186a1.996 1.996 0 0 1-.61-.954V2.768c.08-.363.292-.699.609-.954zm11.238 11.24l2.25 2.25-11.458 6.445 9.208-8.695zm0-2.108L5.639 2.25l11.457 6.446-2.249 2.25zm1.536 1.054l4.225 2.376c.799.45.799 1.187 0 1.636l-4.225 2.377-2.09-2.09 2.09-2.299z"/>
+                </svg>
+              </span>
+              <div class="store-btn-text">
+                <span class="store-btn-sub">GET IT ON</span>
+                <span class="store-btn-main">Google Play</span>
+              </div>
+            </a>
+
+            <a href="https://apple.com/app-store" target="_blank" rel="noopener noreferrer" class="store-btn">
+              <span class="store-btn-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.63-.76 1.05-1.81.93-2.87-1 .04-2.18.66-2.83 1.42-.58.67-.99 1.74-.88 2.78 1.12.09 2.15-.57 2.78-1.33z"/>
+                </svg>
+              </span>
+              <div class="store-btn-text">
+                <span class="store-btn-sub">Download on the</span>
+                <span class="store-btn-main">App Store</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- QR Code Visual -->
+        <div class="cta-visual">
+          <div class="cta-qr-box">
+            <!-- Sleek SVG QR Code Placeholder -->
+            <svg viewBox="0 0 100 100" fill="#181D27">
+              <rect x="10" y="10" width="24" height="24" rx="4" fill="none" stroke="#181D27" stroke-width="4"/>
+              <rect x="16" y="16" width="12" height="12" fill="#FF6A00"/>
+              <rect x="66" y="10" width="24" height="24" rx="4" fill="none" stroke="#181D27" stroke-width="4"/>
+              <rect x="72" y="16" width="12" height="12" fill="#FF6A00"/>
+              <rect x="10" y="66" width="24" height="24" rx="4" fill="none" stroke="#181D27" stroke-width="4"/>
+              <rect x="16" y="72" width="12" height="12" fill="#FF6A00"/>
+              <rect x="42" y="12" width="6" height="6"/>
+              <rect x="52" y="20" width="6" height="6"/>
+              <rect x="42" y="28" width="6" height="6"/>
+              <rect x="12" y="44" width="6" height="6"/>
+              <rect x="24" y="52" width="6" height="6"/>
+              <rect x="44" y="44" width="12" height="12" fill="#FF6A00"/>
+              <rect x="64" y="44" width="8" height="6"/>
+              <rect x="78" y="52" width="10" height="6"/>
+              <rect x="42" y="66" width="6" height="10"/>
+              <rect x="54" y="74" width="8" height="8"/>
+              <rect x="70" y="68" width="16" height="6"/>
+              <rect x="68" y="80" width="8" height="8"/>
+              <rect x="82" y="80" width="6" height="6"/>
+            </svg>
+          </div>
+          <span>Scan to Download App</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       Footer
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <a href="#home" class="brand-logo">
+            <img src="assets/images/app_icon.png" alt="Habitly Logo" class="brand-icon">
+            <span class="brand-name">Habitly</span>
+          </a>
+          <p>
+            Small Steps Today, A Better You Tomorrow. Empowering people worldwide to build consistent habits and distraction-free focus.
+          </p>
+        </div>
+
+        <!-- Links Column 1: Navigation -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Resources -->
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul class="footer-links">
+            <li><a href="#download">Download iOS</a></li>
+            <li><a href="#download">Download Android</a></li>
+            <li><a href="#features">Focus Timer</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Legal -->
+        <div class="footer-col">
+          <h4>Legal & Support</h4>
+          <ul class="footer-links">
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms &amp; Conditions</a></li>
+            <li><a href="mailto:info@appstick.com.bd">Help &amp; Support</a></li>
+            <li><a href="https://appstick.com.bd/" target="_blank" rel="noopener noreferrer">Built by Appstick</a></li>
+            <li><a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a></li>
+            <li><a href="tel:+8801404049797">+88 014 0404 9797</a></li>
+            <li>50, KDA Outer Bypass Rd, Khulna 9100, Bangladesh</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2026 Habitly. All rights reserved. Built by <a href="https://appstick.com.bd/" target="_blank" rel="noopener noreferrer">Appstick</a>.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.9 0-1.63.73-1.63 1.63 0 .9.73 1.63 1.63 1.63.9 0 1.63-.73 1.63-1.63 0-.9-.73-1.63-1.63-1.63z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
