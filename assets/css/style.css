@@ -500,7 +500,7 @@ button {
 }
 
 /* ==========================================================================
-   Hero Visual / Showcase (Pixel-Perfect Coded Dual iPhone 15 Pro Showcase)
+   Hero Visual / Showcase (Pixel-Perfect Dual iPhone 15 Pro Artwork)
    ========================================================================== */
 
 .hero-showcase {
@@ -509,463 +509,84 @@ button {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 10px 0 20px;
-}
-
-/* Fixed-ratio stage for mathematical precision across all viewports */
-.showcase-stage {
-  position: relative;
-  width: 640px;
-  min-width: 640px;
-  flex-shrink: 0;
-  height: 570px;
+  max-width: 660px;
   margin: 0 auto;
   user-select: none;
-  transform-origin: center center;
 }
 
-/* 1. Backdrop Glow & Rings */
-.stage-backdrop-glow {
-  position: absolute;
-  top: 50%;
-  left: 54%;
-  transform: translate(-50%, -50%);
-  width: 480px;
-  height: 480px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 120, 20, 0.28) 0%, rgba(255, 175, 70, 0.12) 50%, transparent 72%);
-  filter: blur(35px);
-  pointer-events: none;
-  z-index: 1;
-  animation: glowPulse 6s ease-in-out infinite alternate;
-}
-
-.stage-backdrop-ring {
-  position: absolute;
-  top: 50%;
-  left: 54%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.stage-backdrop-ring.ring-1 {
-  width: 440px;
-  height: 440px;
-  border: 1.5px solid rgba(255, 140, 40, 0.13);
-}
-
-.stage-backdrop-ring.ring-2 {
-  width: 550px;
-  height: 550px;
-  border: 1px dashed rgba(255, 140, 40, 0.08);
-}
-
-/* 2. Floating Orange Bokeh Dots */
-.stage-dot {
-  position: absolute;
-  border-radius: 50%;
-  background: #FF8A00;
-  pointer-events: none;
-  z-index: 2;
-  box-shadow: 0 0 10px rgba(255, 138, 0, 0.35);
-}
-
-.stage-dot.dot-1 {
-  width: 11px;
-  height: 11px;
-  top: 75px;
-  left: 190px;
-  opacity: 0.5;
-  animation: floatDot 5s ease-in-out infinite;
-}
-
-.stage-dot.dot-2 {
-  width: 14px;
-  height: 14px;
-  top: 20px;
-  left: 340px;
-  opacity: 0.6;
-  animation: floatDot 6s ease-in-out infinite reverse;
-}
-
-.stage-dot.dot-3 {
-  width: 12px;
-  height: 12px;
-  top: 310px;
-  left: 15px;
-  opacity: 0.45;
-  animation: floatDot 7s ease-in-out infinite 1s;
-}
-
-.stage-dot.dot-4 {
-  width: 10px;
-  height: 10px;
-  top: 490px;
-  left: 150px;
-  opacity: 0.5;
-  animation: floatDot 5.5s ease-in-out infinite 0.5s;
-}
-
-.stage-dot.dot-5 {
-  width: 15px;
-  height: 15px;
-  top: 495px;
-  right: 50px;
-  opacity: 0.55;
-  animation: floatDot 6.5s ease-in-out infinite 1.5s;
-}
-
-/* 3. Top-Left Annotation: Track your Habits + Doodle Arrow */
-.doodle-annotation.doodle-track {
-  position: absolute;
-  top: 35px;
-  left: 28px;
-  z-index: 6;
+.hero-showcase-wrapper {
+  position: relative;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  pointer-events: none;
-}
-
-.doodle-text {
-  font-family: var(--font-main);
-  font-weight: 800;
-  font-size: 1.22rem;
-  line-height: 1.15;
-  color: #1E293B;
-  letter-spacing: -0.02em;
-  text-align: right;
-  transform: rotate(-16deg);
-  transform-origin: right bottom;
-  user-select: none;
-}
-
-[data-theme="dark"] .doodle-text {
-  color: #F8FAFC;
-}
-
-.doodle-arrow.arrow-track {
-  width: 58px;
-  height: 58px;
-  margin-top: 4px;
-  margin-right: 4px;
-  overflow: visible;
-  filter: drop-shadow(0 2px 4px rgba(255, 106, 0, 0.25));
-}
-
-/* 4 & 6. iPhone Mockups */
-.phone-mockup {
-  position: absolute;
-  width: 246px;
-  height: 516px;
-  transform-origin: center center;
+  align-items: center;
+  justify-content: center;
+  animation: floatHeroShowcase 6s ease-in-out infinite;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.phone-mockup.phone-primary {
-  left: 116px;
-  top: 48px;
-  z-index: 4;
-  animation: phoneFloatLeft 6s ease-in-out infinite;
+.hero-showcase-wrapper:hover {
+  transform: translateY(-8px) scale(1.018);
 }
 
-.phone-mockup.phone-secondary {
-  left: 336px;
-  top: 18px;
-  z-index: 3;
-  animation: phoneFloatRight 6s ease-in-out infinite;
-}
-
-.phone-outer-frame {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #1C1B20;
-  border-radius: 46px;
-  padding: 7px;
-  border: 2px solid #38373D;
-  box-shadow: 0 30px 65px -10px rgba(15, 23, 42, 0.32), 0 12px 28px -6px rgba(255, 106, 0, 0.14), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
-  overflow: hidden;
-}
-
-.phone-dynamic-island {
+.hero-ambient-glow {
   position: absolute;
-  top: 11px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 74px;
-  height: 21px;
-  background: #000000;
-  border-radius: 12px;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding-right: 12px;
-}
-
-.camera-lens {
-  width: 8px;
-  height: 8px;
+  transform: translate(-50%, -50%);
+  width: 92%;
+  height: 92%;
   border-radius: 50%;
-  background: #0F172A;
-  box-shadow: inset 0 0 2px #1E40AF;
+  background: radial-gradient(circle, rgba(255, 138, 0, 0.22) 0%, rgba(255, 106, 0, 0.08) 50%, transparent 72%);
+  filter: blur(45px);
+  pointer-events: none;
+  z-index: 1;
+  animation: pulseAmbientGlow 6s ease-in-out infinite alternate;
 }
 
-.phone-screen-img {
+[data-theme="dark"] .hero-ambient-glow {
+  background: radial-gradient(circle, rgba(255, 138, 0, 0.28) 0%, rgba(255, 106, 0, 0.12) 48%, transparent 70%);
+  filter: blur(55px);
+}
+
+.hero-showcase-img {
+  position: relative;
+  z-index: 2;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 39px;
+  height: auto;
+  max-width: 100%;
   display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 45px rgba(255, 106, 0, 0.14));
   user-select: none;
   -webkit-user-drag: none;
+  transition: filter var(--transition-base);
 }
 
-.phone-glass-glare {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: none;
-  z-index: 8;
-  border-radius: 46px;
-  background: linear-gradient(128deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.03) 40%, transparent 60%);
+[data-theme="dark"] .hero-showcase-img {
+  filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.55)) drop-shadow(0 0 35px rgba(255, 106, 0, 0.18));
+  -webkit-mask-image: radial-gradient(ellipse 65% 64% at 50% 50%, black 42%, transparent 86%);
+  mask-image: radial-gradient(ellipse 65% 64% at 50% 50%, black 42%, transparent 86%);
 }
 
-/* 5, 7, 9. Floating 3D Badges */
-.floating-badge {
-  position: absolute;
-  z-index: 7;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.floating-badge.badge-habits {
-  left: 8px;
-  top: 275px;
-  animation: floatCardLeft 6s ease-in-out infinite;
-}
-
-.floating-badge.badge-focus {
-  right: 8px;
-  top: 118px;
-  animation: floatCardRightTop 6s ease-in-out infinite;
-}
-
-.floating-badge.badge-consistency {
-  right: 8px;
-  top: 352px;
-  animation: floatCardRightBottom 6s ease-in-out infinite;
-}
-
-.badge-card {
-  position: relative;
-  background: #FFFFFF;
-  border-radius: 20px;
-  padding: 11px 16px;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: 0 16px 36px rgba(255, 120, 20, 0.16), 0 4px 12px rgba(0, 0, 0, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.95);
-  white-space: nowrap;
-  user-select: none;
-}
-
-[data-theme="dark"] .badge-card {
-  background: rgba(30, 34, 45, 0.94);
-  border-color: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(255, 106, 0, 0.15);
-  backdrop-filter: blur(12px);
-}
-
-.badge-sparkles {
-  position: absolute;
-  top: -14px;
-  left: 24px;
-  pointer-events: none;
-  z-index: 8;
-  filter: drop-shadow(0 2px 4px rgba(255, 106, 0, 0.3));
-}
-
-.badge-sparkles.sparkles-card1 {
-  left: auto;
-  right: 22px;
-  top: -14px;
-}
-
-.badge-sparkles.sparkles-right {
-  left: auto;
-  right: 18px;
-  top: -14px;
-}
-
-.badge-icon-wrap {
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.badge-content {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-}
-
-.badge-num {
-  font-family: var(--font-main);
-  font-weight: 800;
-  font-size: 1.65rem;
-  line-height: 1;
-  color: #0F172A;
-  letter-spacing: -0.03em;
-}
-
-[data-theme="dark"] .badge-num {
-  color: #FFFFFF;
-}
-
-.badge-label {
-  font-family: var(--font-main);
-  font-weight: 600;
-  font-size: 0.85rem;
-  color: #64748B;
-  margin-top: 3px;
-}
-
-[data-theme="dark"] .badge-label {
-  color: #94A3B8;
-}
-
-.badge-title {
-  font-family: var(--font-main);
-  font-weight: 800;
-  font-size: 1.25rem;
-  line-height: 1.12;
-  color: #0F172A;
-  letter-spacing: -0.02em;
-}
-
-[data-theme="dark"] .badge-title {
-  color: #FFFFFF;
-}
-
-.badge-trend {
-  width: 28px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 6px;
-  flex-shrink: 0;
-  filter: drop-shadow(0 2px 4px rgba(255, 106, 0, 0.25));
-}
-
-/* 8. Right Doodle Arrow */
-.doodle-annotation.doodle-focus {
-  position: absolute;
-  right: 185px;
-  top: 198px;
-  z-index: 6;
-  pointer-events: none;
-}
-
-.doodle-arrow.arrow-focus {
-  width: 68px;
-  height: 90px;
-  overflow: visible;
-  filter: drop-shadow(0 2px 4px rgba(255, 106, 0, 0.25));
-}
-
-/* Hover Elevation on Interactive Badges */
-.floating-badge:hover {
-  filter: brightness(1.03);
-}
-
-/* Floating Keyframes */
-@keyframes phoneFloatLeft {
+@keyframes floatHeroShowcase {
   0%, 100% {
-    transform: rotate(-6.5deg) translateY(0);
+    transform: translateY(0);
   }
   50% {
-    transform: rotate(-6.5deg) translateY(-8px);
+    transform: translateY(-10px);
   }
 }
 
-@keyframes phoneFloatRight {
+@keyframes pulseAmbientGlow {
   0%, 100% {
-    transform: rotate(9.5deg) translateY(0);
-  }
-  50% {
-    transform: rotate(9.5deg) translateY(-10px);
-  }
-}
-
-@keyframes floatCardLeft {
-  0%, 100% {
-    transform: rotate(-6.5deg) translateY(0);
-  }
-  50% {
-    transform: rotate(-6.5deg) translateY(-7px);
-  }
-}
-
-@keyframes floatCardRightTop {
-  0%, 100% {
-    transform: rotate(9.5deg) translateY(0);
-  }
-  50% {
-    transform: rotate(9.5deg) translateY(-8px);
-  }
-}
-
-@keyframes floatCardRightBottom {
-  0%, 100% {
-    transform: rotate(9.5deg) translateY(0);
-  }
-  50% {
-    transform: rotate(9.5deg) translateY(-9px);
-  }
-}
-
-@keyframes floatDot {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-8px) scale(1.15);
-  }
-}
-
-@keyframes glowPulse {
-  0%, 100% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(0.96);
     opacity: 0.85;
   }
   50% {
-    transform: translate(-50%, -50%) scale(1.08);
+    transform: translate(-50%, -50%) scale(1.06);
     opacity: 1;
   }
 }
-
-/* Dark Theme Overrides for Showcase */
-[data-theme="dark"] .stage-backdrop-glow {
-  background: radial-gradient(circle, rgba(255, 120, 20, 0.32) 0%, rgba(255, 160, 60, 0.14) 45%, transparent 70%);
-}
-[data-theme="dark"] .stage-backdrop-ring.ring-1 {
-  border-color: rgba(255, 140, 40, 0.2);
-}
-[data-theme="dark"] .stage-backdrop-ring.ring-2 {
-  border-color: rgba(255, 140, 40, 0.12);
-}
-
-
 
 /* ==========================================================================
    Quick Highlights Ribbon (Directly below Hero)
@@ -1759,6 +1380,294 @@ button {
 }
 
 /* ==========================================================================
+   App Screens Showcase (Interactive Visual Tour)
+   ========================================================================== */
+
+.screens-section {
+  position: relative;
+  background: var(--bg-body);
+}
+
+.screens-tabs-wrapper {
+  margin-bottom: 40px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+
+.screens-tabs-wrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.screens-tabs-wrapper::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.screens-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: max-content;
+  margin: 0 auto;
+}
+
+.screen-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.screen-tab:hover {
+  color: var(--primary);
+  border-color: var(--primary-glow);
+  transform: translateY(-2px);
+}
+
+.screen-tab.active {
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px var(--primary-glow);
+}
+
+.screen-tab .tab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screens-display-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: 48px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 50px 45px;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .screens-display-grid {
+  background: rgba(26, 32, 44, 0.45);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Phone Column & Frame */
+.screen-phone-column {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.screen-phone-mockup {
+  position: relative;
+  width: 290px;
+  max-width: 100%;
+}
+
+.screen-phone-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110%;
+  height: 90%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 106, 0, 0.22) 0%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.screen-phone-frame {
+  position: relative;
+  z-index: 2;
+  border-radius: 44px;
+  border: 8px solid #1E232E;
+  background: #000000;
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  aspect-ratio: 377 / 820;
+}
+
+[data-theme="dark"] .screen-phone-frame {
+  border-color: #2D3342;
+  box-shadow: 0 30px 70px -10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 106, 0, 0.15);
+}
+
+.screen-dynamic-island {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 82px;
+  height: 20px;
+  background: #000000;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.screen-viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .screen-viewport {
+  background: #11141B;
+}
+
+.screen-display-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.97) translateY(6px);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.35s ease;
+}
+
+.screen-display-img.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateY(0);
+}
+
+/* Screen Details Column */
+.screen-details-column {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+}
+
+.screen-info-panel {
+  display: none;
+  animation: fadeInPanel 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.screen-info-panel.active {
+  display: block;
+}
+
+@keyframes fadeInPanel {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.screen-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  background: var(--primary-subtle);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius-full);
+  margin-bottom: 14px;
+}
+
+[data-theme="dark"] .screen-badge {
+  background: rgba(255, 106, 0, 0.15);
+  color: #FFA05C;
+}
+
+.screen-panel-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.screen-panel-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.screen-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.screen-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.screen-feature-item .item-icon {
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.screen-feature-item .item-icon.check {
+  background: var(--accent-green-bg);
+  color: var(--accent-green);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+[data-theme="dark"] .screen-feature-item .item-icon.check {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34D399;
+}
+
+.screen-feature-item strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-heading);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.screen-feature-item p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ==========================================================================
    Responsive Media Queries
    ========================================================================== */
 
@@ -1768,10 +1677,7 @@ button {
     gap: 24px;
   }
 
-  .showcase-stage {
-    transform: scale(0.82);
-    transform-origin: center center;
-  }
+  
 }
 
 @media (max-width: 1080px) {
@@ -1791,10 +1697,7 @@ button {
     margin-bottom: 28px;
   }
 
-  .showcase-stage {
-    transform: scale(0.70);
-    transform-origin: center center;
-  }
+  
 
   .highlights-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1811,6 +1714,26 @@ button {
 }
 
 @media (max-width: 900px) {
+  .screens-display-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 36px 24px;
+    text-align: center;
+  }
+
+  .screen-phone-column {
+    order: 1;
+  }
+
+  .screen-details-column {
+    order: 2;
+    min-height: auto;
+    text-align: left;
+  }
+
+  .screens-tabs {
+    justify-content: flex-start;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -1826,11 +1749,7 @@ button {
     justify-content: center;
   }
 
-  .showcase-stage {
-    transform: scale(0.85);
-    transform-origin: center center;
-    margin: -10px auto -30px;
-  }
+  .hero-showcase { max-width: 540px; margin: 0 auto; }
 
   .timer-demo-card {
     grid-template-columns: 1fr;
@@ -1914,11 +1833,7 @@ button {
     overflow: visible;
   }
 
-  .showcase-stage {
-    transform: scale(0.64);
-    transform-origin: center center;
-    margin: -55px auto -70px;
-  }
+  .hero-showcase { max-width: 540px; margin: 0 auto; }
 
 }
 
@@ -1943,11 +1858,7 @@ button {
     justify-content: center;
   }
 
-  .showcase-stage {
-    transform: scale(0.54);
-    transform-origin: center center;
-    margin: -75px auto -90px;
-  }
+  .hero-showcase { max-width: 540px; margin: 0 auto; }
 }
 
 @media (max-width: 380px) {
@@ -1955,9 +1866,5 @@ button {
     font-size: 1.6rem;
   }
 
-  .showcase-stage {
-    transform: scale(0.48);
-    transform-origin: center center;
-    margin: -85px auto -105px;
-  }
+  .hero-showcase { max-width: 540px; margin: 0 auto; }
 }
