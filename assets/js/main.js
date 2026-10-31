@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initHeaderScroll();
   initMobileNav();
-  initScreensShowcase();
   initInteractiveTimer();
   initFaqAccordion();
   initBackToTop();
@@ -86,52 +85,9 @@ function initMobileNav() {
 }
 
 
-/* ==========================================================================
-   4. App Screens Showcase (Interactive Tabbed Tour)
-   ========================================================================== */
-function initScreensShowcase() {
-  const tabs = document.querySelectorAll('.screen-tab');
-  const images = document.querySelectorAll('.screen-display-img');
-  const panels = document.querySelectorAll('.screen-info-panel');
-
-  if (!tabs.length || !images.length || !panels.length) return;
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const targetScreen = tab.getAttribute('data-screen');
-      if (!targetScreen) return;
-
-      // Update active tab
-      tabs.forEach(t => {
-        t.classList.remove('active');
-        t.setAttribute('aria-selected', 'false');
-      });
-      tab.classList.add('active');
-      tab.setAttribute('aria-selected', 'true');
-
-      // Update active image
-      images.forEach(img => {
-        if (img.id === `screen-img-${targetScreen}`) {
-          img.classList.add('active');
-        } else {
-          img.classList.remove('active');
-        }
-      });
-
-      // Update active info panel
-      panels.forEach(panel => {
-        if (panel.getAttribute('data-screen') === targetScreen) {
-          panel.classList.add('active');
-        } else {
-          panel.classList.remove('active');
-        }
-      });
-    });
-  });
-}
 
 /* ==========================================================================
-   5. Interactive Focus Timer Demo Widget
+   4. Interactive Focus Timer Demo Widget
    ========================================================================== */
 function initInteractiveTimer() {
   const digits = document.getElementById('timer-digits');
@@ -227,7 +183,7 @@ function initInteractiveTimer() {
 }
 
 /* ==========================================================================
-   6. FAQ Accordion
+   5. FAQ Accordion
    ========================================================================== */
 function initFaqAccordion() {
   const faqItems = document.querySelectorAll('.faq-item');
@@ -251,7 +207,7 @@ function initFaqAccordion() {
 }
 
 /* ==========================================================================
-   7. Back to Top Button
+   6. Back to Top Button
    ========================================================================== */
 function initBackToTop() {
   const btn = document.getElementById('back-to-top');
@@ -274,7 +230,7 @@ function initBackToTop() {
 }
 
 /* ==========================================================================
-   8. Navigation ScrollSpy
+   7. Navigation ScrollSpy
    ========================================================================== */
 function initNavScrollSpy() {
   const sections = document.querySelectorAll('section[id]');

@@ -43,7 +43,6 @@
         <ul class="nav-menu">
           <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#features" class="nav-link">Features</a></li>
-          <li><a href="#screens" class="nav-link">Screens</a></li>
           <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
           <li><a href="#faq" class="nav-link">FAQ</a></li>
         </ul>
@@ -336,244 +335,6 @@
   </section>
 
 <!-- ==========================================================================
-       App Screens Showcase (Interactive Visual Tour)
-       ========================================================================== -->
-  <section class="section-padding screens-section" id="screens">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Visual Tour</span>
-        <h2 class="section-title">Designed for Simplicity &amp; Daily Flow</h2>
-        <p class="section-subtitle">
-          Explore Habitly’s clean, intuitive interface crafted to keep you focused on what matters most.
-        </p>
-      </div>
-
-      <!-- Screen Navigation Tabs -->
-      <div class="screens-tabs-wrapper">
-        <div class="screens-tabs" role="tablist" aria-label="App Screens Tour">
-          <button class="screen-tab active" data-screen="home" role="tab" aria-selected="true">
-            <span class="tab-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-            </span>
-            <span class="tab-title">Daily Habits</span>
-          </button>
-
-          <button class="screen-tab" data-screen="timer" role="tab" aria-selected="false">
-            <span class="tab-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            </span>
-            <span class="tab-title">Focus Timer</span>
-          </button>
-
-          <button class="screen-tab" data-screen="progress" role="tab" aria-selected="false">
-            <span class="tab-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-            </span>
-            <span class="tab-title">Progress &amp; Streaks</span>
-          </button>
-
-          <button class="screen-tab" data-screen="detail" role="tab" aria-selected="false">
-            <span class="tab-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
-            </span>
-            <span class="tab-title">Habit Detail</span>
-          </button>
-
-          <button class="screen-tab" data-screen="profile" role="tab" aria-selected="false">
-            <span class="tab-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            </span>
-            <span class="tab-title">Profile &amp; Settings</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Active Screen Showcase Stage -->
-      <div class="screens-display-grid">
-        <!-- Phone Frame Container -->
-        <div class="screen-phone-column">
-          <div class="screen-phone-mockup">
-            <div class="screen-phone-glow" aria-hidden="true"></div>
-            <div class="screen-phone-frame">
-              <div class="screen-dynamic-island" aria-hidden="true"></div>
-              <div class="screen-viewport">
-                <img id="screen-img-home" class="screen-display-img active" src="assets/images/screen_home.png" alt="Habitly Daily Habits Home Screen" width="377" height="841" loading="lazy">
-                <img id="screen-img-timer" class="screen-display-img" src="assets/images/screen_timer.png" alt="Habitly Focus Pomodoro Timer Screen" width="376" height="844" loading="lazy">
-                <img id="screen-img-progress" class="screen-display-img" src="assets/images/screen_progress.png" alt="Habitly Consistency Analytics and Progress Screen" width="428" height="933" loading="lazy">
-                <img id="screen-img-detail" class="screen-display-img" src="assets/images/screen_habit_detail.png" alt="Habitly Habit Detail and Target Screen" width="428" height="1122" loading="lazy">
-                <img id="screen-img-profile" class="screen-display-img" src="assets/images/screen_profile.png" alt="Habitly Profile and Preferences Screen" width="428" height="836" loading="lazy">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Feature Description Column -->
-        <div class="screen-details-column">
-          <!-- Panel 1: Home -->
-          <div class="screen-info-panel active" data-screen="home">
-            <div class="screen-badge">Today's Agenda</div>
-            <h3 class="screen-panel-title">Track Habits With A Single Tap</h3>
-            <p class="screen-panel-desc">
-              Organize your day effortlessly. Habitly displays your planned habits with clear time targets, completion status, and personal daily streaks.
-            </p>
-            <div class="screen-feature-list">
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Morning &amp; Afternoon Routines</strong>
-                  <p>Categorized layout keeps your priorities clear and actionable.</p>
-                </div>
-              </div>
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Instant Streak Feedback</strong>
-                  <p>Feel the accomplishment every time you tap to complete a daily goal.</p>
-                </div>
-              </div>
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Quick-Add FAB</strong>
-                  <p>Easily create custom habits or modify targets in seconds.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Panel 2: Timer -->
-          <div class="screen-info-panel" data-screen="timer">
-            <div class="screen-badge">Deep Focus</div>
-            <h3 class="screen-panel-title">Master Distraction-Free Flow</h3>
-            <p class="screen-panel-desc">
-              Pair your habits with structured focus sessions. The built-in Pomodoro timer eliminates digital clutter so you can immerse fully.
-            </p>
-            <div class="screen-feature-list">
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Flexible Session Presets</strong>
-                  <p>Select 5, 25, 30, or 45-minute blocks tailored to your energy.</p>
-                </div>
-              </div>
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Linked Habit Progression</strong>
-                  <p>Completed minutes automatically synchronize with your habit targets.</p>
-                </div>
-              </div>
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Zero Popups or Distractions</strong>
-                  <p>A calm, soothing screen that keeps your mind on task.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Panel 3: Progress -->
-          <div class="screen-info-panel" data-screen="progress">
-            <div class="screen-badge">Analytics &amp; Streaks</div>
-            <h3 class="screen-panel-title">See Your Growth Come to Life</h3>
-            <p class="screen-panel-desc">
-              Visual feedback is the key to habit consistency. Habitly gives you clean charts and completion rates that inspire you to keep going.
-            </p>
-            <div class="screen-feature-list">
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Weekly &amp; Monthly Heatmaps</strong>
-                  <p>Understand your peak productivity days and consistency trends.</p>
-                </div>
-              </div>
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Habit Performance Breakdown</strong>
-                  <p>Identify which habits thrive and where you need extra focus.</p>
-                </div>
-              </div>
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Milestone Badges</strong>
-                  <p>Celebrate reaching 7, 30, and 100-day streaks with visual rewards.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Panel 4: Detail -->
-          <div class="screen-info-panel" data-screen="detail">
-            <div class="screen-badge">Granular Control</div>
-            <h3 class="screen-panel-title">Complete Habit History &amp; Target Tracking</h3>
-            <p class="screen-panel-desc">
-              Dive into individual habits to review historical performance, customize reminder times, and adjust weekly goals.
-            </p>
-            <div class="screen-feature-list">
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Granular Log History</strong>
-                  <p>Inspect past days, completed durations, and session notes.</p>
-                </div>
-              </div>
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Custom Frequency Schedules</strong>
-                  <p>Set habits for every day, weekdays only, or specific selected days.</p>
-                </div>
-              </div>
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Reminder Personalization</strong>
-                  <p>Schedule exact morning or evening reminders that fit your routine.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Panel 5: Profile -->
-          <div class="screen-info-panel" data-screen="profile">
-            <div class="screen-badge">Your Workspace</div>
-            <h3 class="screen-panel-title">Personalized Preferences &amp; Dark Mode</h3>
-            <p class="screen-panel-desc">
-              Tailor Habitly to your aesthetic with instant Dark/Light mode, manage your profile, and keep your data backed up securely.
-            </p>
-            <div class="screen-feature-list">
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Dark &amp; Light Themes</strong>
-                  <p>Enjoy a beautiful interface day or night with zero eye strain.</p>
-                </div>
-              </div>
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>100% Privacy &amp; Data Control</strong>
-                  <p>Offline first architecture ensures your personal routines stay private.</p>
-                </div>
-              </div>
-              <div class="screen-feature-item">
-                <div class="item-icon check">✓</div>
-                <div>
-                  <strong>Customizable Notifications</strong>
-                  <p>Full control over reminder sounds, notification styles, and quiet hours.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
        Interactive Focus Timer Live Widget
        ========================================================================== -->
   <section class="section-padding timer-demo-section">
@@ -789,21 +550,42 @@
   <section class="section-padding section-alt legal-section" id="privacy">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Your Privacy</span>
+        <span class="section-tag">Privacy First</span>
         <h2 class="section-title">Privacy Policy</h2>
         <p class="section-subtitle">
-          Habitly collects only the information needed to provide and improve the app.
+          Habitly respects your privacy and is fully committed to protecting your personal information.
         </p>
       </div>
       <div class="legal-content">
-        <h3>Information We Collect</h3>
-        <p>When you create an account, we may collect your name, email address, and profile details. We also process habit names, goals, schedules, reminders, focus sessions, progress, favorites, and notification status that you choose to save in the app.</p>
-        <h3>How We Use Information</h3>
-        <p>We use this information to authenticate your account, save and synchronize your habits, send requested reminders, show progress insights, provide support, maintain security, and improve Habitly.</p>
-        <h3>Sharing and Security</h3>
-        <p>We do not sell your personal information. Limited information may be processed by trusted authentication, database, storage, notification, or analytics providers that help us operate the service. We use reasonable safeguards, but no online service can guarantee absolute security.</p>
-        <h3>Your Choices</h3>
-        <p>You can manage your profile, habits, reminders, and notification permissions from the app. For privacy questions or account support, contact <a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a>.</p>
+        <h3>1. Information We Collect</h3>
+        <p><strong>Account Information:</strong> When you register or sign in using Email, Google, or Apple, we collect your name, email address, and profile photo.</p>
+        <p><strong>Habit &amp; Productivity Data:</strong> Habit titles, frequencies, daily targets, completion history, streaks, focus timer logs, and user preferences stored to deliver core app functionality.</p>
+        <p><strong>Device &amp; Push Notification Info:</strong> Device model, OS version, and notification permission tokens to deliver habit alarms and reminder notifications.</p>
+        <p><strong>Advertising &amp; Diagnostics:</strong> When advertisements are enabled, third-party advertising partners such as Google AdMob may collect and process device advertising identifiers (Google Advertising ID / IDFA) and app interaction data to serve non-intrusive or relevant ads.</p>
+
+        <h3>2. How We Use Your Information</h3>
+        <p>We use the collected information strictly to authenticate your account, securely synchronize your habits across devices, send requested reminders on time, calculate progress insights, troubleshoot issues, and protect account security.</p>
+
+        <h3>3. Third-Party Services</h3>
+        <p>We never sell your personal information. We partner only with trusted infrastructure and advertising providers operating under strict privacy safeguards:</p>
+        <ul style="list-style: disc; margin-left: 24px; margin-bottom: 16px; color: var(--color-text-secondary); line-height: 1.7;">
+          <li><strong>Google Firebase:</strong> Authentication, Cloud Firestore, and Cloud Storage for secure account management and cloud sync.</li>
+          <li><strong>Google Sign-In &amp; Apple Sign-In:</strong> For seamless authentication.</li>
+          <li><strong>Google AdMob:</strong> For serving mobile advertisements in compliance with Google Developer Policies.</li>
+        </ul>
+
+        <h3>4. Account &amp; Data Deletion (Your Rights)</h3>
+        <p>We give users full control over their personal data. You have the right to request deletion of your account and all associated data at any time:</p>
+        <ul style="list-style: disc; margin-left: 24px; margin-bottom: 16px; color: var(--color-text-secondary); line-height: 1.7;">
+          <li><strong>In-App Deletion:</strong> You can delete your account immediately by opening the Habitly app, navigating to <em>Profile &gt; Delete Account</em>, and confirming the prompt. This permanently erases your authentication record, habits, and profile images from our Firebase servers.</li>
+          <li><strong>Web / Email Deletion Request:</strong> You can submit a deletion request by emailing us at <a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a> with the subject <em>"Account Deletion Request"</em>. Your account and all associated data will be permanently purged within 30 days of verification.</li>
+        </ul>
+
+        <h3>5. Children's Privacy</h3>
+        <p>Habitly does not knowingly collect or solicit personal information from children under the age of 13. If you believe a child has provided us with personal information, please contact us at <a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a> and we will promptly delete it.</p>
+
+        <h3>6. Contact Us</h3>
+        <p>If you have any questions about this Privacy Policy or your personal data, please contact Appstick at <a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a> or visit us at 50, KDA Outer Bypass Rd, Khulna 9100, Bangladesh.</p>
       </div>
     </div>
   </section>
@@ -925,7 +707,6 @@
           <ul class="footer-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="#screens">Screens Tour</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
