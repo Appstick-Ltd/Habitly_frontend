@@ -9,7 +9,7 @@ A modern, high-converting, and responsive landing page for **Habitly** — the d
 - **Pixel-Perfect Hero Section**: Matches the design mockup with dual iPhone device frames, Dynamic Island, authentic screenshots, doodle arrows, and floating badges.
 - **Value Proposition Bar**: 4 highlight cards for Habit Tracking, Focus & Productivity, Visual Progress, and Goal Building.
 - **Interactive Focus Timer Demo**: A live, working 25-minute Pomodoro timer directly in the browser with preset switches (5m, 25m, 30m, 45m) and circular SVG progress.
-- **Dark & Light Mode**: Built-in instant theme switcher with local storage persistence.
+- **Clean & Modern Aesthetic**: Crisp light aesthetics with vibrant orange brand accents.
 - **Responsive Design**: Flawlessly optimized across Mobile, Tablet, Laptop, and Desktop screens.
 - **Zero External Dependencies**: Pure HTML5, Vanilla CSS3, and modern Vanilla JavaScript for lightning-fast loading speeds.
 

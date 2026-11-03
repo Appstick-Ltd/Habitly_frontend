@@ -4,7 +4,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initThemeToggle();
+  // Ensure clean light theme by clearing any legacy dark theme preference
+  try {
+    localStorage.removeItem('habitly-theme');
+    document.documentElement.removeAttribute('data-theme');
+  } catch (e) {}
   initHeaderScroll();
   initMobileNav();
   initInteractiveTimer();
@@ -13,29 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavScrollSpy();
 });
 
-/* ==========================================================================
-   1. Theme Toggle (Light / Dark Mode)
-   ========================================================================== */
-function initThemeToggle() {
-  const toggleBtn = document.getElementById('theme-toggle-btn');
-  if (!toggleBtn) return;
-
-  const savedTheme = localStorage.getItem('habitly-theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('habitly-theme', newTheme);
-  });
-}
 
 /* ==========================================================================
    2. Sticky Header on Scroll
