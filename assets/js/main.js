@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initBackToTop();
   initNavScrollSpy();
+  initLegalToc();
 });
 
 
@@ -215,7 +216,7 @@ function initBackToTop() {
    ========================================================================== */
 function initNavScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
   if (!sections.length || !navLinks.length) return;
 
@@ -240,4 +241,38 @@ function initNavScrollSpy() {
       }
     });
   }, { passive: true });
+}
+
+/* ==========================================================================
+   8. Table of Contents ScrollSpy (Legal Pages)
+   ========================================================================== */
+function initLegalToc() {
+  const tocLinks = document.querySelectorAll('.legal-toc a');
+  const sections = document.querySelectorAll('.legal-content section[id]');
+
+  if (!tocLinks.length || !sections.length) return;
+
+  function updateToc() {
+    let current = '';
+    const scrollY = window.pageYOffset;
+
+    sections.forEach(section => {
+      const top = section.offsetTop - 140;
+      if (scrollY >= top) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    tocLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === `#${current}`) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateToc, { passive: true });
+  updateToc();
 }

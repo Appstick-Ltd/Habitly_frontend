@@ -107,7 +107,7 @@
           <!-- Store Badges -->
           <div class="store-buttons">
             <!-- Google Play Button -->
-            <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="store-btn">
+            <a href="https://play.google.com/store/apps/details?id=bd.com.appstick.havitly" target="_blank" rel="noopener noreferrer" class="store-btn">
               <span class="store-btn-icon">
                 <img src="assets/images/google-play.svg" alt="Google Play" width="28" height="28" class="store-icon-img">
               </span>
@@ -118,12 +118,12 @@
             </a>
 
             <!-- App Store Button -->
-            <a href="https://apple.com/app-store" target="_blank" rel="noopener noreferrer" class="store-btn">
+            <a href="#download" class="store-btn store-btn-soon" aria-label="App Store version coming soon">
               <span class="store-btn-icon">
                 <img src="assets/images/app-store.svg" alt="App Store" width="28" height="28" class="store-icon-img">
               </span>
               <div class="store-btn-text">
-                <span class="store-btn-sub">Download on the</span>
+                <span class="store-btn-sub">Coming soon on the</span>
                 <span class="store-btn-main">App Store</span>
               </div>
             </a>
@@ -257,7 +257,7 @@
             </svg>
           </div>
           <h3>Integrated Pomodoro Timer</h3>
-          <p>Boost your productivity with custom focus sessions, quick intervals (5m, 25m, 30m, 45m), and structured short breaks.</p>
+          <p>Boost your productivity with focus sessions linked to your habits, quick presets (15m, 25m, 30m, 45m, 60m), and short 5-minute breaks.</p>
         </div>
 
         <!-- Feature 3 -->
@@ -306,8 +306,8 @@
               <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
             </svg>
           </div>
-          <h3>100% Privacy & Offline Ready</h3>
-          <p>Your habits belong to you. Habitly works completely offline with zero intrusive tracking or unwanted data collection.</p>
+          <h3>Secure Cloud Sync &amp; Privacy</h3>
+          <p>Sign in with Email or Google and your habits sync securely to your account. We never sell your data, and you can delete your account anytime.</p>
         </div>
       </div>
     </div>
@@ -333,7 +333,7 @@
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span>Quick session presets (5m, 25m, 30m, 45m)</span>
+              <span>Quick session presets (15m, 25m, 30m, 45m, 60m)</span>
             </li>
             <li>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -346,10 +346,11 @@
         <div class="interactive-timer">
           <!-- Preset Chips -->
           <div class="timer-preset-chips">
-            <button class="preset-chip" data-minutes="5">5 min</button>
+            <button class="preset-chip" data-minutes="15">15 min</button>
             <button class="preset-chip active" data-minutes="25">25 min</button>
             <button class="preset-chip" data-minutes="30">30 min</button>
             <button class="preset-chip" data-minutes="45">45 min</button>
+            <button class="preset-chip" data-minutes="60">60 min</button>
           </div>
 
           <!-- Circular SVG Progress Ring -->
@@ -464,7 +465,7 @@
             </div>
           </button>
           <div class="faq-answer">
-            <p>Habitly provides habit tracking, reminders, focus timer sessions, and progress insights. Availability and pricing may vary by platform and release.</p>
+            <p>Yes. Habitly's core features — habit tracking, reminders, the focus timer, and progress insights — are free to use.</p>
           </div>
         </div>
 
@@ -503,7 +504,7 @@
             </div>
           </button>
           <div class="faq-answer">
-            <p>Habitly uses account and app data to provide its features. We do not sell personal data, and limited information may be processed by trusted infrastructure providers to operate and secure the service.</p>
+            <p>Habitly uses your account and habit data only to provide its features. We do not sell personal data, and limited information is processed by trusted infrastructure providers (such as Google Firebase) to operate and secure the service. Read our full <a href="privacy-policy.html">Privacy Policy</a>.</p>
           </div>
         </div>
 
@@ -524,76 +525,6 @@
   </section>
 
   <!-- ==========================================================================
-       Privacy Policy & Terms
-       ========================================================================== -->
-  <section class="section-padding section-alt legal-section" id="privacy">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Privacy First</span>
-        <h2 class="section-title">Privacy Policy</h2>
-        <p class="section-subtitle">
-          Habitly respects your privacy and is fully committed to protecting your personal information.
-        </p>
-      </div>
-      <div class="legal-content">
-        <h3>1. Information We Collect</h3>
-        <p><strong>Account Information:</strong> When you register or sign in using Email, Google, or Apple, we collect your name, email address, and profile photo.</p>
-        <p><strong>Habit &amp; Productivity Data:</strong> Habit titles, frequencies, daily targets, completion history, streaks, focus timer logs, and user preferences stored to deliver core app functionality.</p>
-        <p><strong>Device &amp; Push Notification Info:</strong> Device model, OS version, and notification permission tokens to deliver habit alarms and reminder notifications.</p>
-        <p><strong>Advertising &amp; Diagnostics:</strong> When advertisements are enabled, third-party advertising partners such as Google AdMob may collect and process device advertising identifiers (Google Advertising ID / IDFA) and app interaction data to serve non-intrusive or relevant ads.</p>
-
-        <h3>2. How We Use Your Information</h3>
-        <p>We use the collected information strictly to authenticate your account, securely synchronize your habits across devices, send requested reminders on time, calculate progress insights, troubleshoot issues, and protect account security.</p>
-
-        <h3>3. Third-Party Services</h3>
-        <p>We never sell your personal information. We partner only with trusted infrastructure and advertising providers operating under strict privacy safeguards:</p>
-        <ul style="list-style: disc; margin-left: 24px; margin-bottom: 16px; color: var(--color-text-secondary); line-height: 1.7;">
-          <li><strong>Google Firebase:</strong> Authentication, Cloud Firestore, and Cloud Storage for secure account management and cloud sync.</li>
-          <li><strong>Google Sign-In &amp; Apple Sign-In:</strong> For seamless authentication.</li>
-          <li><strong>Google AdMob:</strong> For serving mobile advertisements in compliance with Google Developer Policies.</li>
-        </ul>
-
-        <h3>4. Account &amp; Data Deletion (Your Rights)</h3>
-        <p>We give users full control over their personal data. You have the right to request deletion of your account and all associated data at any time:</p>
-        <ul style="list-style: disc; margin-left: 24px; margin-bottom: 16px; color: var(--color-text-secondary); line-height: 1.7;">
-          <li><strong>In-App Deletion:</strong> You can delete your account immediately by opening the Habitly app, navigating to <em>Profile &gt; Delete Account</em>, and confirming the prompt. This permanently erases your authentication record, habits, and profile images from our Firebase servers.</li>
-          <li><strong>Web / Email Deletion Request:</strong> You can submit a deletion request by emailing us at <a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a> with the subject <em>"Account Deletion Request"</em>. Your account and all associated data will be permanently purged within 30 days of verification.</li>
-        </ul>
-
-        <h3>5. Children's Privacy</h3>
-        <p>Habitly does not knowingly collect or solicit personal information from children under the age of 13. If you believe a child has provided us with personal information, please contact us at <a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a> and we will promptly delete it.</p>
-
-        <h3>6. Contact Us</h3>
-        <p>If you have any questions about this Privacy Policy or your personal data, please contact Appstick at <a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a> or visit us at 50, KDA Outer Bypass Rd, Khulna 9100, Bangladesh.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-padding legal-section" id="terms">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Using Habitly</span>
-        <h2 class="section-title">Terms &amp; Conditions</h2>
-        <p class="section-subtitle">
-          By using Habitly, you agree to use the app responsibly and in accordance with these terms.
-        </p>
-      </div>
-      <div class="legal-content">
-        <h3>Acceptable Use</h3>
-        <p>Habitly is intended for personal habit tracking and general wellness and productivity support. Do not misuse the service, interfere with its operation, attempt unauthorized access, or use it for unlawful purposes.</p>
-        <h3>Your Account and Content</h3>
-        <p>You are responsible for keeping your account information secure and for the habit data and other content you add. You retain responsibility for maintaining any information you want to keep.</p>
-        <h3>Wellness Disclaimer</h3>
-        <p>Habitly does not provide medical, mental-health, fitness, financial, or other professional advice. Do not rely on the app as a substitute for advice from a qualified professional.</p>
-        <h3>Changes and Termination</h3>
-        <p>We may update features or these terms from time to time. Continued use after an update means you accept the revised terms. Access may be suspended or terminated when these terms are violated.</p>
-        <h3>Support</h3>
-        <p>Habitly is developed by <a href="https://appstick.com.bd/" target="_blank" rel="noopener noreferrer">Appstick</a>. For help, contact <a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
        Download CTA Banner Section
        ========================================================================== -->
   <section class="cta-section" id="download">
@@ -609,7 +540,7 @@
 
           <!-- Store Badges -->
           <div class="store-buttons">
-            <a href="https://play.google.com" target="_blank" rel="noopener noreferrer" class="store-btn">
+            <a href="https://play.google.com/store/apps/details?id=bd.com.appstick.havitly" target="_blank" rel="noopener noreferrer" class="store-btn">
               <span class="store-btn-icon">
                 <img src="assets/images/google-play.svg" alt="Google Play" width="28" height="28" class="store-icon-img">
               </span>
@@ -619,12 +550,12 @@
               </div>
             </a>
 
-            <a href="https://apple.com/app-store" target="_blank" rel="noopener noreferrer" class="store-btn">
+            <a href="#download" class="store-btn store-btn-soon" aria-label="App Store version coming soon">
               <span class="store-btn-icon">
                 <img src="assets/images/app-store.svg" alt="App Store" width="28" height="28" class="store-icon-img">
               </span>
               <div class="store-btn-text">
-                <span class="store-btn-sub">Download on the</span>
+                <span class="store-btn-sub">Coming soon on the</span>
                 <span class="store-btn-main">App Store</span>
               </div>
             </a>
@@ -695,8 +626,8 @@
         <div class="footer-col">
           <h4>Product</h4>
           <ul class="footer-links">
-            <li><a href="#download">Download iOS</a></li>
-            <li><a href="#download">Download Android</a></li>
+            <li><a href="#download">iOS (Coming Soon)</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=bd.com.appstick.havitly" target="_blank" rel="noopener noreferrer">Download Android</a></li>
             <li><a href="#features">Focus Timer</a></li>
           </ul>
         </div>
@@ -705,8 +636,9 @@
         <div class="footer-col">
           <h4>Legal & Support</h4>
           <ul class="footer-links">
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms &amp; Conditions</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+            <li><a href="privacy-policy.html#delete-account">Delete Account</a></li>
             <li><a href="mailto:info@appstick.com.bd">Help &amp; Support</a></li>
             <li><a href="https://appstick.com.bd/" target="_blank" rel="noopener noreferrer">Built by Appstick</a></li>
             <li><a href="mailto:info@appstick.com.bd">info@appstick.com.bd</a></li>
@@ -720,19 +652,22 @@
       <div class="footer-bottom">
         <p>© 2026 Habitly. All rights reserved. Built by <a href="https://appstick.com.bd/" target="_blank" rel="noopener noreferrer">Appstick</a>.</p>
         <div class="footer-socials">
-          <a href="#" class="social-link" aria-label="Twitter">
+          <a href="https://facebook.com/appstick.com.bd" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Appstick on Facebook">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.971H15.83c-1.491 0-1.956.93-1.956 1.886v2.264h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
             </svg>
           </a>
-          <a href="#" class="social-link" aria-label="GitHub">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          <a href="https://appstick.com.bd/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Appstick Website">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
             </svg>
           </a>
-          <a href="#" class="social-link" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64c-.9 0-1.63.73-1.63 1.63 0 .9.73 1.63 1.63 1.63.9 0 1.63-.73 1.63-1.63 0-.9-.73-1.63-1.63-1.63z"/>
+          <a href="mailto:info@appstick.com.bd" class="social-link" aria-label="Email Appstick">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="m22 7-10 6L2 7"></path>
             </svg>
           </a>
         </div>

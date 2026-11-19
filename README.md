@@ -1,14 +1,15 @@
 # Habitly - Official Landing Page
 
-A modern, high-converting, and responsive landing page for **Habitly** — the daily habit tracker and Pomodoro focus app.
+A modern, high-converting, and responsive landing page for **Habitly** — the daily habit tracker and Pomodoro focus app by [Appstick](https://appstick.com.bd/).
 
 ![Habitly Landing Page Preview](assets/images/screen_home.png)
 
 ## ✨ Features
 
-- **Pixel-Perfect Hero Section**: Matches the design mockup with dual iPhone device frames, Dynamic Island, authentic screenshots, doodle arrows, and floating badges.
+- **Pixel-Perfect Hero Section**: Authentic app mockups, crisp typography, and direct download links.
 - **Value Proposition Bar**: 4 highlight cards for Habit Tracking, Focus & Productivity, Visual Progress, and Goal Building.
-- **Interactive Focus Timer Demo**: A live, working 25-minute Pomodoro timer directly in the browser with preset switches (5m, 25m, 30m, 45m) and circular SVG progress.
+- **Interactive Focus Timer Demo**: A live, working Pomodoro timer directly in the browser with preset switches (15m, 25m, 30m, 45m, 60m) matching the app and circular SVG progress ring.
+- **Dedicated Legal Pages**: Standalone, fully compliant **Privacy Policy** (with explicit Account Deletion steps) and **Terms & Conditions** with sticky table of contents navigation.
 - **Clean & Modern Aesthetic**: Crisp light aesthetics with vibrant orange brand accents.
 - **Responsive Design**: Flawlessly optimized across Mobile, Tablet, Laptop, and Desktop screens.
 - **Zero External Dependencies**: Pure HTML5, Vanilla CSS3, and modern Vanilla JavaScript for lightning-fast loading speeds.
@@ -19,7 +20,7 @@ To view the landing page locally:
 
 1. Clone or navigate to the directory:
    ```bash
-   cd havitly-landing-page
+   cd Habitly_frontend
    ```
 
 2. Start a simple local server:
@@ -36,13 +37,15 @@ To view the landing page locally:
 ## 📁 Project Structure
 
 ```
-havitly-landing-page/
+Habitly_frontend/
 ├── index.html                  # Main landing page HTML
+├── privacy-policy.html         # Dedicated Privacy Policy page
+├── terms-and-conditions.html   # Dedicated Terms & Conditions page
 ├── assets/
 │   ├── css/
 │   │   └── style.css           # Vanilla CSS with custom properties & responsive queries
 │   ├── js/
-│   │   └── main.js             # Vanilla JS for timer, tabs, theme toggle & nav
+│   │   └── main.js             # Vanilla JS for timer, scrollspy, FAQs & mobile nav
 │   └── images/
 │       ├── app_icon.png        # App icon mark
 │       ├── favicon.png         # Browser favicon
@@ -59,8 +62,8 @@ havitly-landing-page/
 
 - **Primary Orange**: `#FF6A00` / `#FF8533`
 - **Primary Gradient**: `linear-gradient(135deg, #FF6A00 0%, #FF8533 100%)`
-- **Backgrounds**: `#FFFFFF` (Light) / `#0F1218` (Dark)
+- **Backgrounds**: `#FFFFFF` (Light) / `#FAF8F6` (Alt)
 - **Typography**: `Plus Jakarta Sans` & `Caveat` (Google Fonts)
 
 ---
-© 2026 Habitly. All rights reserved.
+© 2026 Habitly. Developed by [Appstick](https://appstick.com.bd/). All rights reserved.
